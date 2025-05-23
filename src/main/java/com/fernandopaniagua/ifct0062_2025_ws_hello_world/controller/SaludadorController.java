@@ -15,7 +15,7 @@ public class SaludadorController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/saludo")
-    public Saludo saludo(@RequestParam(value="nombre",defaultValue = "a todos") String name) {
+    public Saludo saludo(@RequestParam(value="nombre",defaultValue = "al equipo") String name) {
         return new Saludo(counter.incrementAndGet(), String.format(template,name));
     }
 
